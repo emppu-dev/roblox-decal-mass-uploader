@@ -15,6 +15,7 @@ with open("config.json") as f:
 
 cookie = str(config.get("cookie"))
 image = str(config.get("image"))
+upload_num = int(config.get("upload_num"))
 
 def log(text):
     timestamp = datetime.datetime.utcfromtimestamp(time.time()).strftime("%H:%M:%S")
@@ -66,7 +67,7 @@ def hash_file(filename):
 
 with requests.Session() as session:
     session.cookies.update({".ROBLOSECURITY": cookie})
-    for i in range (0,25):
+    for i in range (upload_num):
         randomnum = random.randrange(0, 1000000)
         img = Image.open(image)
         img2 = img.resize((420+i,420+i), Image.LANCZOS)
