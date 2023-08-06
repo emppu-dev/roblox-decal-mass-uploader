@@ -19,7 +19,8 @@ Put the cookie inside of the config.json
 ```json
 {
     "cookie":"REPLACE-THIS-WITH-YOUR-COOKIE",
-    "image":"image.png"
+    "image":"image.png",
+    "upload_num":25
 }
 ```
 
