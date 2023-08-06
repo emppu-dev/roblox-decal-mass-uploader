@@ -13,5 +13,5 @@ for package in packages:
         __import__(package)
         log(f"`{package}` is already installed")
     except ImportError:
-        print(f"Installing `{package}`")
+        log(f"Installing `{package}`")
         os.system(f"pip install {package}")
