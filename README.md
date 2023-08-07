@@ -10,6 +10,7 @@ Please star this repo if you like the tool so i can make more of these in the fu
 
 ## Usage
 Install python [here](https://www.python.org/downloads/)
+INSTALL TO PATH!!!
 
 Run setup.py to install all needed libraries
 
