@@ -29,5 +29,8 @@ Specify the name of the file in config.json
 
 Run main.py and wait for the magic to happen
 
+## Disclaimer
+This tool is provided for educational purposes only. Users are responsible for ensuring their actions comply with all laws and regulations. The developer is not liable for any misuse or unlawful activities conducted using this tool.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
