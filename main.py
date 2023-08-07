@@ -31,8 +31,8 @@ def get_token(session):
             veri = response.text[start_value:end_value]
         else:
             raise ValueError("Token not found")
-    except Exception as e:
-        print("Error fetching verification token:", e)
+    except:
+        log("Error getting the verification token")
         return None
     return veri
 
@@ -68,7 +68,7 @@ def hash_file(filename):
 with requests.Session() as session:
     session.cookies.update({".ROBLOSECURITY": cookie})
     for i in range (upload_num):
-        randomnum = random.randrange(0, 1000000)
+        randomnum = random.randrange(0, 99999999999999)
         img = Image.open(image)
         img2 = img.resize((420+i,420+i), Image.LANCZOS)
         img2.save(f"final/{randomnum}.png")
