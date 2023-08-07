@@ -21,6 +21,14 @@ def log(text):
     timestamp = datetime.datetime.utcfromtimestamp(time.time()).strftime("%H:%M:%S")
     print(f"[{timestamp}] {text}")
 
+def welcome(session):
+    try:
+        bot = session.get('https://www.roblox.com/mobileapi/userinfo').json()["UserName"]
+        log(f"Welcome `{bot}`")
+    except:
+        log("Invalid cookie")
+        quit()
+
 def get_token(session):
     response = session.get("https://www.roblox.com/build/upload", verify=False)
     try:
@@ -67,6 +75,7 @@ def hash_file(filename):
 
 with requests.Session() as session:
     session.cookies.update({".ROBLOSECURITY": cookie})
+    welcome(session)
     for i in range (upload_num):
         randomnum = random.randrange(0, 99999999999999)
         img = Image.open(image)
