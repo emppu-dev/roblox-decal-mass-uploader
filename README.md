@@ -30,6 +30,11 @@ Specify the name of the file in config.json
 
 Run main.py and wait for the magic to happen
 
+## Preview
+![image](https://github.com/emppu-dev/roblox-decal-mass-uploader/assets/83163481/7264cb3b-4299-43eb-b947-a60a2590e663)<br>![image](https://github.com/emppu-dev/roblox-decal-mass-uploader/assets/83163481/80692b25-f05b-44f0-a329-2c268b033f22)
+
+
+
 ## Disclaimer
 This tool is provided for educational purposes only. Users are responsible for ensuring their actions comply with all laws and regulations. The developer is not liable for any misuse or unlawful activities conducted using this tool.
 
