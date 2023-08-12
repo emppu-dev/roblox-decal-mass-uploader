@@ -1,5 +1,6 @@
 # 🖼️📤 Roblox decal mass uploader
 Please star this repo if you like the tool so i can make more of these in the future <3
+Contact me on discord @emppu if you have any problems with this
 
 ## To Do
 - [x] Clean up the code
