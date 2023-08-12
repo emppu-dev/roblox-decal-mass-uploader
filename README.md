@@ -32,10 +32,10 @@ Specify the name of the file in config.json
 Run main.py and wait for the magic to happen
 
 ## 🚑 ICE
-If you encounter any problems do this
-Press Windows + R, type "cmd" and press enter
-Navigate to the scripts folder using "cd PASTE-PATH-HERE" and run the script with "python main.py"
-If you see any errors please contact me on discord with a screenshot of the error so i can help you out
+If you encounter any problems do this<br>
+Press Windows + R, type "cmd" and press enter<br>
+Navigate to the scripts folder using "cd PASTE-PATH-HERE" and run the script with "python main.py"<br>
+If you see any errors please contact me on discord with a screenshot of the error so i can help you out<br>
 If you cant figure out how to open it in cmd please run a basic Google search before contacting me
 
 ## 📷 Preview
