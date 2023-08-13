@@ -1,7 +1,7 @@
 # 🖼️📤 Roblox decal mass uploader
 Please star this repo if you like the tool so i can make more of these in the future <3<br>
 This tool has yet to be tested on operating systems other than Windows<br>
-Contact me on discord @emppu if you have any problems with this<br>
+If you have any issues with this please open a Github issue here instead of contacting me personally<br>
 
 ## To Do
 - [x] Clean up the code
@@ -31,13 +31,6 @@ Put the image that you want to upload in to the same directory with main.py
 Specify the name of the file in config.json
 
 Run main.py and wait for the magic to happen
-
-## 🚑 ICE
-If you encounter any problems do this<br>
-Press Windows + R, type "cmd" and press enter<br>
-Navigate to the scripts folder using "cd PASTE-PATH-HERE" and run the script with "python main.py"<br>
-If you see any errors please contact me on discord with a screenshot of the error so i can help you out<br>
-If you cant figure out how to open it in cmd please run a basic Google search before contacting me
 
 ## 📷 Preview
 ![image](https://github.com/emppu-dev/roblox-decal-mass-uploader/assets/83163481/7264cb3b-4299-43eb-b947-a60a2590e663)<br>![image](https://github.com/emppu-dev/roblox-decal-mass-uploader/assets/83163481/80692b25-f05b-44f0-a329-2c268b033f22)
