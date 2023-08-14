@@ -9,6 +9,7 @@ If you have any issues with this please open a Github issue here instead of cont
 - [x] Provide an set-up tutorial
 - [ ] Optimize
 - [ ] Add proxy support
+- [ ] Make more user friendly (move away from json config)
 
 ## 🛠️ Usage
 Install python [here](https://www.python.org/downloads/)
