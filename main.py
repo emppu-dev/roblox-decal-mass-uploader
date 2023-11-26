@@ -1,5 +1,4 @@
 import requests
-import urllib3
 from PIL import Image
 import os
 import time
@@ -7,8 +6,6 @@ import datetime
 import random
 import hashlib
 import json
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 with open("config.json") as f:
     config = json.load(f)
@@ -30,31 +27,22 @@ def welcome(session):
         quit()
 
 def get_token(session):
-    response = session.get("https://www.roblox.com/build/upload", verify=False)
-    try:
-        start_index = response.text.find("__RequestVerificationToken")
-        if start_index != -1:
-            start_value = response.text.find('value="', start_index) + len('value="')
-            end_value = response.text.find('"', start_value)
-            veri = response.text[start_value:end_value]
-        else:
-            raise ValueError("Token not found")
-    except:
-        log("Error getting the verification token")
-        return None
-    return veri
+    response = session.post('https://friends.roblox.com/v1/users/1/request-friendship')
+    if 'x-csrf-token' in response.headers:
+        return response.headers['x-csrf-token']
+    else:
+        log('x-csrf-token not found')
 
 def upload_decal(cookie, location, name, session):
-    token = get_token(session)
-    if not token:
-        return
-    files = {"file": (f"final/{name}.png", open(location, "rb"), "image/png")}
-    data = {"__RequestVerificationToken": token, "assetTypeId": "13", "isOggUploadEnabled": "True", "isTgaUploadEnabled": "True", "onVerificationPage": "False", "captchaEnabled": "True", "name": name, "description":"emppu"}
     try:
-        response = session.post("https://www.roblox.com/build/upload?assetTypeId=13&nl=true", files=files, data=data)
+        headers = {"Requester": "Client","X-CSRF-TOKEN": get_token(session)}
+        response = session.post(f"https://data.roblox.com/data/upload/json?assetTypeId=13&name={name}&description=emppu", data=open(location, 'rb'), headers=headers)
         response.raise_for_status()
         log(f"Uploaded `{name}` successfully")
     except requests.exceptions.RequestException as e:
+        if response.status_code == 429:
+            log(f"Ratelimited, waiting 60 seconds")
+            time.sleep(60)
         log(f"Error sending the request")
 
 with open("words.txt", "r") as file:
@@ -90,4 +78,4 @@ with requests.Session() as session:
             session.headers.update({"User-Agent": useragent})
             name = random.choice(word_list)
             upload_decal(cookie, os.path.join("final", file), name, session)
-            time.sleep(5)
+            time.sleep(1.5)
