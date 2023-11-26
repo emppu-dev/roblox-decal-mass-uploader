@@ -5,6 +5,7 @@ If you have any issues with this please open a Github issue here instead of cont
 
 ## To Do
 - [x] Clean up the code
+- [x] Fix all issues
 - [ ] Enhance the visual appeal (add colors)
 - [x] Provide an set-up tutorial
 - [ ] Optimize
