@@ -19,6 +19,9 @@ def log(text):
     print(f"[{timestamp}] {text}")
 
 def welcome(session):
+    if not os.path.exists(image):
+        log("No image found")
+        quit()
     try:
         bot = session.get('https://www.roblox.com/mobileapi/userinfo').json()["UserName"]
         log(f"Welcome `{bot}`")
