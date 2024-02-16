@@ -59,9 +59,10 @@ for root, dirs, files in os.walk("final"):
         os.remove(os.path.join(root, file))
 
 def hash_file(filename):
-   h = hashlib.sha1()
+   h = hashlib.sha256()
    with open(filename, "rb") as file:
-       for chunk in iter(lambda: file.read(1024), b""): h.update(chunk)
+       for chunk in iter(lambda: file.read(1024), b""):
+           h.update(chunk)
    return h.hexdigest()
 
 with requests.Session() as session:
