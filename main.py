@@ -23,7 +23,7 @@ def welcome(session):
         log("No image found")
         quit()
     try:
-        bot = session.get('https://www.roblox.com/mobileapi/userinfo').json()["UserName"]
+        bot = session.get('https://users.roblox.com/v1/users/authenticated').json()["displayName"]
         log(f"Welcome `{bot}`")
     except:
         log("Invalid cookie")
@@ -82,4 +82,4 @@ with requests.Session() as session:
             session.headers.update({"User-Agent": useragent})
             name = random.choice(word_list)
             upload_decal(cookie, os.path.join("final", file), name, session)
-            time.sleep(1.5)
+            time.sleep(5)
